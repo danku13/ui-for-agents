@@ -1,0 +1,48 @@
+# Glossary
+
+> **Read when:** a term is unclear. **Section:** root reference. **Related:** README.md
+
+- **Adaptive layout** — layout that switches between predefined arrangements per environment (window class, input type), as opposed to fluid reflow.
+- **Affordance** — visual properties that suggest how a thing can be used (a raised button looks pressable).
+- **Anatomy** — named parts of a component (e.g. button: container, label, icon, badge) used in documentation and QA.
+- **Anti-pattern** — a recurring "solution" that looks reasonable but reliably causes problems.
+- **Baseline grid** — invisible vertical rhythm to which text blocks align.
+- **Breakpoint** — viewport/window width at which layout arrangement changes.
+- **Color ramp (scale)** — ordered steps of one hue (50…900) from which semantic roles pick values.
+- **Component** — a reusable UI unit with defined anatomy, states, and behavior.
+- **Controlled / uncontrolled** — whether a component's value is driven by external state or owns it internally.
+- **Contrast ratio** — luminance ratio between text and background; WCAG floor 4.5:1 body, 3:1 large text / UI parts.
+- **Design token** — named design decision (color, size, duration); the contract between design and implementation.
+- **Elevation** — perceived distance from the background, expressed via shadow/surface/border.
+- **Escape hatch** — documented "exit" in an API (style/class passthrough) for cases the component does not cover.
+- **Empty state** — what a region shows when it has no data; a teaching moment, not a blank.
+- **Focus order** — sequence focus moves through with Tab; must match visual/logical order.
+- **Focus trap** — keeping keyboard focus inside a modal until it closes; must release focus back on close.
+- **Golden-image test** — automated pixel comparison against an approved baseline screenshot.
+- **Gestalt principles** — perception rules (proximity, similarity, common region…) explaining grouping.
+- **Headless component** — behavior + a11y without styling; you supply the skin.
+- **Hit target (touch target)** — interactive area size; WCAG 2.2 minimum 24×24 px, 44×44 recommended for touch.
+- **Immediate mode** — GUI style (egui) where the UI is re-declared every frame; state lives in the app.
+- **Landmark** — semantic page region (navigation, main, search) exposed to assistive tech.
+- **Measure (line length)** — characters per line; readable range 45–75.
+- **Microcopy** — short UI text: labels, buttons, errors, hints.
+- **Modal / modeless** — blocking vs non-blocking overlay; modal demands a decision now.
+- **Optimistic UI** — showing the expected result before confirmation, rolling back on failure.
+- **Pattern (UX)** — a named reusable solution to a recurring flow problem (e.g. "undo toast").
+- **Perceived performance** — how fast the UI feels, independent of actual latency.
+- **Primitive** — lowest-level building block (button, input, text) in a kit.
+- **Progressive disclosure** — showing detail only when requested, keeping default views simple.
+- **Progressive loading (docs)** — agent loads only files relevant to the current task.
+- **RTL / LTR** — right-to-left / left-to-right script direction; mirrors layout and icons.
+- **Retained mode** — GUI style (iced, Slint) where widgets persist; state syncs between model and view.
+- **Scrim** — dimming layer behind overlays that separates context layers.
+- **Skeleton screen** — layout-shaped placeholder shown while real content loads.
+- **Slot** — named insertion point in a component (header, footer, actions).
+- **Spacing scale** — fixed spacing steps (4, 8, 12, 16, 24, 32, 48, 64) instead of arbitrary values.
+- **State (UI)** — condition a component renders: default, hover, focus, active, disabled, loading, empty, error.
+- **Surface** — background plane on which content sits; carries elevation meaning.
+- **Themable** — component expresses colors/sizes only through tokens, so remapping re-skins it.
+- **Truncation** — shortening overflowing text with ellipsis; must preserve access to full content.
+- **WCAG** — Web Content Accessibility Guidelines; the a11y norm this library cites.
+- **Whitespace** — empty area used for grouping and hierarchy; a design material, not leftovers.
+- **Z-index discipline** — managing stacking via a fixed layer scale instead of ad-hoc numbers.
