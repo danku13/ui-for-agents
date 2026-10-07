@@ -24,6 +24,7 @@ Four design decisions define this library:
 | UX patterns | `30-ux-patterns/` | `forms-validation-ux`, `empty-loading-error-states`, `microcopy`, `onboarding-first-run`, `search-filtering-sorting`, `dashboards-data-viz-ux`. |
 | Quality | `40-quality/` | `accessibility-wcag`, `responsive-adaptive`, `usability-heuristics`, `perceived-performance`, `visual-qa-protocol` (includes non-browser QA paths — mandatory final gate). |
 | Platforms | `50-platforms/` | `web-css-dom`, `rust-native-gui`, `wasm-canvas-rendering`, `cross-platform-parity`. |
+| Styles | `60-styles/` | `style-design-process` (how to invent a style), `style-catalog` (selector by product type), plus 11 ready presets: `minimalist-swiss`, `dark-premium`, `glassmorphism`, `neumorphism`, `brutalism`, `editorial`, `playful-friendly`, `corporate-trust`, `retro-vintage`, `futuristic-neon`, `handcrafted-organic`. |
 | Reference | `REFERENCES.md`, `GLOSSARY.md` | Curated GitHub/web links (copy-paste ready), terminology. |
 
 ## File format (every knowledge file)
@@ -53,6 +54,7 @@ Four design decisions define this library:
 | Review or audit existing UI | `40-quality/` (all five) + `30-ux-patterns/empty-loading-error-states.md` |
 | Theme / dark mode work | `10-design-system/design-tokens.md` + `theming-dark-mode.md` |
 | Rust native / WASM target | your task files + relevant `50-platforms/` file + `40-quality/visual-qa-protocol.md` |
+| Create or apply a distinct visual style | `60-styles/style-catalog.md` + `60-styles/style-design-process.md` + the chosen `60-styles/<style>.md` + `10-design-system/design-tokens.md` + `40-quality/visual-qa-protocol.md` |
 
 The full matrix with mandatory vs on-demand files lives in `AGENT-WORKFLOW.md`.
 

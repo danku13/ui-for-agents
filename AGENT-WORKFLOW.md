@@ -7,7 +7,7 @@ This protocol defines how an agent loads and applies this library. It exists to 
 ## The 7-step protocol
 
 ### S0 — Classify the task
-Pick exactly one: `NEW-SCREEN`, `NEW-COMPONENT`, `BUILD-KIT`, `INTEGRATE-LIB`, `MODIFY-UI`, `REVIEW-UI`, `FIX-DEFECT`, `THEME-CHANGE`. If scope is genuinely ambiguous (e.g. "improve the settings page" could be REVIEW-UI or MODIFY-UI), ask the user one clarifying question instead of guessing — rework is more expensive than a question.
+Pick exactly one: `NEW-SCREEN`, `NEW-COMPONENT`, `BUILD-KIT`, `INTEGRATE-LIB`, `MODIFY-UI`, `REVIEW-UI`, `FIX-DEFECT`, `THEME-CHANGE`, `NEW-STYLE` (invent a custom visual style), `APPLY-STYLE` (build UI in a chosen style). If scope is genuinely ambiguous (e.g. "improve the settings page" could be REVIEW-UI or MODIFY-UI), ask the user one clarifying question instead of guessing — rework is more expensive than a question.
 
 ### S1 — Select files with the matrix
 Use the table below. Load **Mandatory** files; load **On demand** files only when the task actually touches their topic.
@@ -22,6 +22,8 @@ Use the table below. Load **Mandatory** files; load **On demand** files only whe
 | REVIEW-UI | 40/usability-heuristics, 40/accessibility-wcag, 40/visual-qa-protocol | 30/empty-loading-error-states, 20/components-catalog |
 | FIX-DEFECT | the file whose rules were violated | follow `Related:` links from that file |
 | THEME-CHANGE | 10/design-tokens, 10/theming-dark-mode | 00/color; 50/ file for renderer limits |
+| NEW-STYLE | 60/style-design-process, 60/style-catalog, 10/design-tokens, 00/color, 00/typography | 60/ existing presets as references; 00/motion-principles; 40/visual-qa-protocol |
+| APPLY-STYLE | 60/<style>.md, 10/design-tokens, 00/visual-hierarchy, 40/visual-qa-protocol | 20/ files per component types; 50/ platform file; 60/style-catalog if the choice is not yet fixed |
 
 ### S2 — Load minimally
 - Budget: 5–8 files for a typical task. Never load a whole section folder "just in case".

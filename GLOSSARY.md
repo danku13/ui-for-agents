@@ -46,3 +46,9 @@
 - **WCAG** — Web Content Accessibility Guidelines; the a11y norm this library cites.
 - **Whitespace** — empty area used for grouping and hierarchy; a design material, not leftovers.
 - **Z-index discipline** — managing stacking via a fixed layer scale instead of ad-hoc numbers.
+- **Brutalism** — web style embracing raw, unpolished visuals: thick borders, hard shadows, 0 radius, harsh type, "honest UI".
+- **Era lock** — retro style discipline: one decade's palette/type/texture per product, never mixed.
+- **Glassmorphism** — style built on frosted translucent panels (background blur + light-alpha borders) over a designed scene.
+- **Neumorphism** — soft-UI style: same-hue surfaces with light/dark shadow pairs simulating extrusion; strict a11y limits.
+- **Signature element** — 1–3 components/effects deliberately exaggerated to carry a style's identity.
+- **Style preset** — documented token set + signature elements + motion spec + a11y watchpoints that reproduces a visual style.

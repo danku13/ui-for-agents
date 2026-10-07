@@ -88,6 +88,13 @@ Copy-paste ready list. Each entry is annotated with what it is good for so an ag
 - lost-pixel — https://github.com/lost-pixel/lost-pixel — OSS visual regression for storybooks & pages.
 - Lighthouse — https://github.com/GoogleChrome/lighthouse — perf/a11y/best-practice audits (browser targets).
 
+## Style inspiration (60-styles)
+
+- Brutalist Websites — https://brutalistwebsites.com — living gallery of brutalist web design.
+- Fonts In Use — https://fontsinuse.com — real typography indexed by industry, era, and style; the type-pairing research tool.
+- Style Stage — https://stylestage.dev — one HTML document restyled many ways; proof that a style is a token/skin layer.
+- Coolors — https://coolors.co — quick palette exploration when building a token preset.
+
 ## Reading (concept sources)
 
 - Nielsen Norman Group articles — https://www.nngroup.com/articles/ — UX research basis for the 30/40 sections.
