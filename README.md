@@ -24,7 +24,7 @@ Four design decisions define this library:
 | UX patterns | `30-ux-patterns/` | `forms-validation-ux`, `empty-loading-error-states`, `microcopy`, `onboarding-first-run`, `search-filtering-sorting`, `dashboards-data-viz-ux`. |
 | Quality | `40-quality/` | `accessibility-wcag`, `responsive-adaptive`, `usability-heuristics`, `perceived-performance`, `visual-qa-protocol` (includes non-browser QA paths — mandatory final gate). |
 | Platforms | `50-platforms/` | `web-css-dom`, `rust-native-gui`, `wasm-canvas-rendering`, `cross-platform-parity`. |
-| Styles | `60-styles/` | `style-design-process` (how to invent a style), `style-catalog` (selector by product type), plus 11 ready presets: `minimalist-swiss`, `dark-premium`, `glassmorphism`, `neumorphism`, `brutalism`, `editorial`, `playful-friendly`, `corporate-trust`, `retro-vintage`, `futuristic-neon`, `handcrafted-organic`. |
+| Styles | `60-styles/` | `style-design-process` (how to invent a style), `style-catalog` (selector: decision table + movement map), plus 33 ready presets — 11 product presets (`minimalist-swiss`, `dark-premium`, `glassmorphism`, `neumorphism`, `brutalism`, `editorial`, `playful-friendly`, `corporate-trust`, `retro-vintage`, `futuristic-neon`, `handcrafted-organic`) and 22 movement presets (`bauhaus`, `de-stijl`, `constructivism`, `art-nouveau`, `art-deco`, `mid-century-modern`, `pop-art`, `psychedelia`, `punk-zine`, `memphis`, `japanese-zen`, `dark-academia`, `maximalism`, `neubrutalism`, `acid-graphics`, `skeuomorphism`, `flat-design`, `corporate-memphis`, `claymorphism`, `y2k-chrome`, `frutiger-aero`, `vaporwave-synthwave`). |
 | Reference | `REFERENCES.md`, `GLOSSARY.md` | Curated GitHub/web links (copy-paste ready), terminology. |
 
 ## File format (every knowledge file)

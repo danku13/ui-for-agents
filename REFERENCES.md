@@ -90,10 +90,17 @@ Copy-paste ready list. Each entry is annotated with what it is good for so an ag
 
 ## Style inspiration (60-styles)
 
+- CARI — https://cari.institute — Consumer Aesthetics Research Institute; taxonomy of digital aesthetics (Y2K, Frutiger Aero, Corporate Memphis, vaporwave) with era boundaries.
+- Web Design Museum — https://www.webdesignmuseum.org — archived websites by year (1991–2010s); primary material for UI-era presets.
 - Brutalist Websites — https://brutalistwebsites.com — living gallery of brutalist web design.
+- neobrutalism.dev — https://neobrutalism.dev — the modern neubrutalist kit and its conventions.
+- Bauhaus Dessau Foundation — https://www.bauhaus-dessau.de — primary Bauhaus material (movement preset source).
+- Tate — art movement glossary — https://www.tate.org.uk/art/art-terms — reliable one-stop definitions for Art Nouveau, Art Deco, Constructivism, De Stijl, Pop Art.
+- Wikipedia: List of art movements — https://en.wikipedia.org/wiki/Art_movement — starting map for named directions; follow to each movement's article for palette/type evidence.
 - Fonts In Use — https://fontsinuse.com — real typography indexed by industry, era, and style; the type-pairing research tool.
 - Style Stage — https://stylestage.dev — one HTML document restyled many ways; proof that a style is a token/skin layer.
 - Coolors — https://coolors.co — quick palette exploration when building a token preset.
+- Google Fonts specimens — https://fonts.google.com — era display faces (geometric sans for Bauhaus, condensed for constructivism/deco, humanist for Frutiger Aero); pair with Fonts In Use evidence.
 
 ## Reading (concept sources)
 

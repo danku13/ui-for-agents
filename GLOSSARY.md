@@ -52,3 +52,20 @@
 - **Neumorphism** — soft-UI style: same-hue surfaces with light/dark shadow pairs simulating extrusion; strict a11y limits.
 - **Signature element** — 1–3 components/effects deliberately exaggerated to carry a style's identity.
 - **Style preset** — documented token set + signature elements + motion spec + a11y watchpoints that reproduces a visual style.
+- **Art Nouveau** — 1890–1910 movement: whiplash organic lines, botanical ornament as frames, arch containers.
+- **Art Deco** — 1920s–30s movement: ceremonial symmetry, geometric ornament (sunburst/fan/chevron), gold + black + jewel tones.
+- **Bauhaus** — 1919–33 school/movement: form follows function; circle/triangle/square primitives, primary triad + black, geometric sans.
+- **Constructivism** — 1915–30s Russian movement: red/black diagonal geometry, photomontage, condensed uppercase poster type.
+- **Corporate Memphis** — 2017– flat-illustration style (also "Alegria"): humans with exaggerated proportions; illustration-led, quiet UI.
+- **Dark Academia** — aesthetic movement: parchment/oxblood/gold scholarly romance, old-style serif, engraved imagery.
+- **De Stijl** — 1917–31 movement (Mondrian): orthogonal black grid, white cells, primary-colored landmarks; diagonals and curves banned.
+- **Flat design** — 2013+ paradigm (iOS 7/Metro): zero faux-realism; hierarchy via color blocks + typography; Flat 2.0 reintroduced subtle depth.
+- **Frutiger Aero** — 2004–13 digital aesthetic: glossy aqua buttons, nature imagery, blue-green + white, humanist sans.
+- **Memphis Design** — 1981–88 postmodern movement (Memphis Group): squiggles, terrazzo, clashing brights on pastel.
+- **Movement preset** — style preset documenting a named historical direction (Bauhaus, Art Deco, Y2K…); same format as product presets.
+- **Neubrutalism** — 2016– web movement: brutalist borders/shadows plus saturated color blocks and chunky type; "brutalism that went to art school".
+- **Skeuomorphism** — 2000s–13 paradigm: digital imitates physical materials and affordances (leather, gloss, bevels).
+- **Vaporwave / Synthwave** — sibling 2010s nostalgia movements: vapor = pastel pink/cyan + VHS irony; synth = purple night + sunset grid + neon.
+- **Y2K aesthetic** — 1997–2004 (revived 2020s): liquid chrome, iridescence, translucent tech-blue, techno-optimism.
+- **Ma (間)** — Japanese concept of negative space as a design material; basis of the japanese-zen preset.
+- **Wabi-sabi / Kanso** — Japanese aesthetics of imperfect beauty / simplicity; inform zen-style restraint.
