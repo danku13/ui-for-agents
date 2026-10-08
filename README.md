@@ -58,6 +58,10 @@ Four design decisions define this library:
 
 The full matrix with mandatory vs on-demand files lives in `AGENT-WORKFLOW.md`.
 
+## Live style demo
+
+A demo landing page ("Content OS") implements the same structure in five movement presets — `art-nouveau`, `bauhaus`, `de-stijl`, `constructivism`, `art-deco` — with a live style switcher. Source lives in `docs/` (GitHub Pages). Use it to see what each preset produces in practice: https://danku13.github.io/ui-for-agents/
+
 ## Extending the library
 
 Add rules as new numbered entries (`R<n>`) inside the matching file; keep the `Rule → Why → Example` shape; keep files under ~170 lines (split into two files when a file outgrows this); update `Related:` links in both directions. Platform-specific exceptions belong in `50-platforms/`, never inside fundamentals — fundamentals must stay true for every renderer.
