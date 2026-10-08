@@ -63,6 +63,9 @@
   --cal-gap: 10px;
   --quote-mark: none;
   --brand-accent: var(--accent);
+  --orn-h: 3px;             /* section-head ornament height */
+  --sel-bg: #141414;        /* ::selection per theme */
+  --sel-fg: #FFFFFF;
 }
 
 html { scroll-behavior: smooth; }
@@ -98,6 +101,30 @@ a { color: var(--accent-2); text-decoration-thickness: 1.5px; text-underline-off
 
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
+::selection { background: var(--sel-bg); color: var(--sel-fg); }
+
+/* ---------- icon system (sprite symbols, themed via currentColor) ---------- */
+.ic {
+  width: 1.15em; height: 1.15em;
+  fill: currentColor; flex: none;
+  display: inline-block; vertical-align: -0.18em;
+}
+.ic--lead { margin-right: .5em; }
+.medallion {
+  display: grid; place-items: center;
+  width: 46px; height: 46px; margin-bottom: .8rem;
+  position: relative;
+}
+.medallion .ic { width: 22px; height: 22px; position: relative; z-index: 1; }
+
+/* ---------- hero art: one inline SVG per style, shown by theme ---------- */
+.hero-art { display: none; width: 100%; height: auto; }
+html[data-style="art-nouveau"] .hero-art--nouveau,
+html[data-style="de-stijl"] .hero-art--destijl,
+html[data-style="bauhaus"] .hero-art--bauhaus,
+html[data-style="constructivism"] .hero-art--construct,
+html[data-style="art-deco"] .hero-art--deco { display: block; }
+
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: 100;
   background: var(--ink); color: var(--bg);
@@ -117,7 +144,8 @@ a { color: var(--accent-2); text-decoration-thickness: 1.5px; text-underline-off
 .section-head { max-width: 720px; margin-bottom: 2.4rem; }
 .section-head::after {
   content: ""; display: var(--title-rule);
-  height: 3px; background: var(--line); margin-top: 1.2rem;
+  height: var(--orn-h); background: var(--orn-bg, var(--line));
+  background-repeat: no-repeat; margin-top: 1.2rem;
 }
 .section-sub { color: var(--muted); max-width: 62ch; }
 
@@ -136,7 +164,10 @@ a { color: var(--accent-2); text-decoration-thickness: 1.5px; text-underline-off
   font-family: var(--font-display); font-weight: 800; font-size: 1.25rem;
   text-decoration: none; color: var(--ink); letter-spacing: .02em;
 }
+.brand { display: inline-flex; align-items: center; gap: .45rem; }
 .brand span { color: var(--brand-accent); }
+.brand__mark { width: 1.05em; height: 1.05em; fill: var(--brand-accent); }
+.brand__mark-dot { fill: var(--bg); }
 .nav { display: flex; gap: 1.4rem; margin-left: auto; }
 .nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: .92rem; }
 .nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
@@ -184,7 +215,7 @@ a { color: var(--accent-2); text-decoration-thickness: 1.5px; text-underline-off
   list-style: none; margin: 0; padding: 0;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem;
 }
-.stat { display: grid; gap: .3rem; padding: 1.1rem 1.2rem;
+.stat { padding: 1.1rem 1.2rem;
   border-top: var(--border-w) solid var(--line); }
 .stat__val {
   font-family: var(--font-display); font-weight: 800;
@@ -278,8 +309,28 @@ a { color: var(--accent-2); text-decoration-thickness: 1.5px; text-underline-off
 /* ---------- segments ---------- */
 .segments__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
 .seg h3 { font-size: 1.3rem; }
-.seg__list { margin: .8rem 0 0; padding-left: 1.15rem; display: grid; gap: .5rem; color: var(--ink); }
-.seg__list li::marker { color: var(--accent-ink); }
+.seg__list { margin: .8rem 0 0; padding: 0; list-style: none; display: grid; gap: .55rem; color: var(--ink); }
+.seg__list li { display: flex; gap: .55rem; align-items: flex-start; }
+.seg__ic { margin-top: .18rem; color: var(--accent-ink); }
+.seg__title-ic { color: var(--accent-ink); margin-right: .45rem; }
+
+/* cal channel label with brand glyph */
+.cal__chan { display: flex; align-items: center; gap: .45rem; }
+.cal__chan .ic { width: 1.05rem; height: 1.05rem; opacity: .85; }
+
+/* stat icon row */
+.stat { display: grid; gap: .3rem; justify-items: start; }
+.stat__ic { width: 1.35rem; height: 1.35rem; color: var(--accent-ink); margin-bottom: .1rem; }
+
+/* step corner icon */
+.step { position: relative; }
+.step__ic {
+  position: absolute; top: 1.3rem; right: 1.3rem;
+  width: 1.3rem; height: 1.3rem; color: var(--accent-ink); opacity: .8;
+}
+
+/* footer glyph */
+.footer__ic { margin-right: .5rem; color: var(--ink); }
 
 /* ---------- quote ---------- */
 .quote blockquote { margin: 0; }
