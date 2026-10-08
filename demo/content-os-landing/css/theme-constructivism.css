@@ -1,0 +1,153 @@
+/* ============================================================
+   Theme: Constructivism (≈1921)
+   Tokens from 60-styles/constructivism.md — poster red + ink on
+   cream paper, ≤3 diagonals per view, 0–150ms snaps, cream never
+   pure white.
+   ============================================================ */
+
+html[data-style="constructivism"] {
+  --bg: #F2E8D5;             /* cream paper, never pure white (R5) */
+  --bg-soft: #E9DEC8;
+  --surface: #E9DEC8;
+  --ink: #16130F;
+  --muted: #57503F;
+
+  --accent: #D42B1E;         /* poster red — fills & large display */
+  --accent-fg: #F2E8D5;
+  --accent-ink: #A61F14;     /* deepened red, ≥6:1 on cream for small text */
+  --accent-2: #333944;       /* deep neutral block */
+  --accent-3: #D42B1E;
+
+  --line: #16130F;
+  --border-w: 2px;
+  --radius: 0px;
+  --chip-radius: 0px;
+
+  --font-display: 'Oswald', 'PT Sans', sans-serif;
+  --font-body: 'PT Sans', system-ui, sans-serif;
+
+  --h1-weight: 700;
+  --h1-transform: uppercase;
+  --h1-tracking: .01em;
+  --h1-lh: .98;
+  --h2-weight: 700;
+  --h2-transform: uppercase;
+  --h2-tracking: .01em;
+
+  --kicker-weight: 700;
+  --kicker-transform: uppercase;
+  --kicker-tracking: .14em;
+
+  --btn-weight: 700;
+  --btn-transform: uppercase;
+  --btn-tracking: .05em;
+  --btn-radius: 0px;
+
+  --card-border-w: 2px;
+  --card-radius: 0px;
+
+  --focus: #16130F;
+  --speed: 100ms;            /* R6: 0–150ms snaps */
+  --hero-dur: 140ms;
+
+  --cal-frame-w: 2px;
+  --cal-cell-border-w: 1px;
+  --cal-cell-line: #C9BCA0;
+  --brand-accent: #D42B1E;
+}
+
+/* hero decor: Lissitzky set — red wedge, rotated ink bar, ring.
+   Diagonal budget = 3 (R1): wedge, bar, small wedge. Ring is neutral. */
+html[data-style="constructivism"] .hero__visual::before {
+  content: ""; position: absolute; inset: 0;
+  clip-path: polygon(0 100%, 100% 16%, 100% 100%);
+  background: #D42B1E;
+}
+html[data-style="constructivism"] .hero__visual::after {
+  content: ""; position: absolute; left: -8%; top: 46%;
+  width: 116%; height: 24px; background: #16130F;
+  transform: rotate(-14deg);
+}
+html[data-style="constructivism"] .shape--a {
+  width: 168px; height: 168px; border-radius: 50%;
+  border: 22px solid #333944; background: transparent;
+  right: 6%; top: 5%;
+}
+html[data-style="constructivism"] .shape--b {
+  width: 190px; height: 150px;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  background: #D42B1E;
+  left: 5%; bottom: 6%;
+}
+html[data-style="constructivism"] .shape--c {
+  width: 34px; height: 58%; background: #16130F;
+  left: 30%; top: 9%;
+}
+
+/* buttons: skewed poster cells; action red deepened to ≥4.5:1 with
+   cream text (a11y watchpoint overrides raw #D42B1E for text-bearing fills) */
+html[data-style="constructivism"] .btn { transform: skewX(-8deg); }
+html[data-style="constructivism"] .btn--primary { background: #C0200F; color: #F2E8D5; }
+html[data-style="constructivism"] .btn--primary:hover { background: #16130F; color: #F2E8D5; }
+html[data-style="constructivism"] .btn--ghost { border-color: #16130F; color: #16130F; }
+html[data-style="constructivism"] .btn--ghost:hover { background: #16130F; color: #F2E8D5; }
+
+/* section heads: red mass marker (hierarchy by mass, R7) */
+html[data-style="constructivism"] .section-head h2::after {
+  content: ""; display: block; width: 68px; height: 8px;
+  background: #D42B1E; margin-top: .7rem;
+}
+
+/* cards: paper blocks with hard overlap on hover (depth by overlap) */
+html[data-style="constructivism"] .card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 #16130F;
+}
+
+/* step numbers: red squares, cream numerals (large bold ≥3:1) */
+html[data-style="constructivism"] .step__num {
+  background: #D42B1E; color: #F2E8D5;
+  border-radius: 0;
+}
+
+/* chips: ink/neutral blocks with cream text, red identified by bar (R2).
+   Bar is scoped to .cal — legend .dot shares chip--s but must stay a flat square. */
+html[data-style="constructivism"] .chip { position: relative; font-weight: 700; }
+html[data-style="constructivism"] .cal .chip--s { background: #16130F; color: #F2E8D5; }
+html[data-style="constructivism"] .cal .chip--s::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
+  background: #D42B1E;
+}
+html[data-style="constructivism"] .cal .chip--c { background: #333944; color: #F2E8D5; }
+html[data-style="constructivism"] .cal .chip--a { background: #E9DEC8; color: #16130F; border: 2px solid #D42B1E; }
+html[data-style="constructivism"] .cal .chip--d { background: transparent; color: #16130F; border: 3px solid #16130F; }
+
+/* legend dots: flat palette squares (no chip chrome) */
+html[data-style="constructivism"] .dot { border: 0; }
+html[data-style="constructivism"] .dot.chip--s { background: #16130F; }
+html[data-style="constructivism"] .dot.chip--c { background: #333944; }
+html[data-style="constructivism"] .dot.chip--a { background: #D42B1E; }
+html[data-style="constructivism"] .dot.chip--d { background: #57503F; }
+
+/* quote: stepped left mass */
+html[data-style="constructivism"] .quote blockquote {
+  border-left: 12px solid #D42B1E; padding-left: 1.3rem;
+}
+html[data-style="constructivism"] .quote p {
+  font-family: var(--font-display); font-weight: 600;
+  text-transform: none;
+}
+
+/* stat values: display mass */
+html[data-style="constructivism"] .stat__val { color: #16130F; }
+html[data-style="constructivism"] .stat { border-top-width: 4px; }
+
+/* CTA: ink block, red headline bar */
+html[data-style="constructivism"] .cta { background: #16130F; }
+html[data-style="constructivism"] .cta h2 { color: #F2E8D5; }
+html[data-style="constructivism"] .cta h2::after {
+  content: ""; display: block; width: 68px; height: 8px;
+  background: #D42B1E; margin-top: .7rem;
+}
+html[data-style="constructivism"] .cta .btn--ghost { border-color: #F2E8D5; color: #F2E8D5; }
+html[data-style="constructivism"] .cta .btn--ghost:hover { background: #F2E8D5; color: #16130F; }

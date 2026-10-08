@@ -1,0 +1,143 @@
+/* ============================================================
+   Theme: De Stijl (1917)
+   Tokens from 60-styles/de-stijl.md — white dominant, two line
+   weights (8px structural / 3px detail), primaries as landmark
+   cells, zero curves, zero diagonals.
+   ============================================================ */
+
+html[data-style="de-stijl"] {
+  --bg: #FFFFFF;
+  --bg-soft: #FFFFFF;        /* white ground is the style; sections divide by 8px lines */
+  --surface: #FFFFFF;
+  --ink: #0A0A0A;
+  --muted: #444444;
+
+  --accent: #DD0100;         /* red = primary action cell */
+  --accent-fg: #FFFFFF;      /* white on red ≈5.1:1 (black fails 4.1) */
+  --accent-ink: #DD0100;     /* red only ever colors ≥large/bold or fills */
+  --accent-2: #FACA03;       /* yellow — black text only */
+  --accent-3: #225095;       /* blue = information */
+
+  --line: #0A0A0A;
+  --border-w: 3px;
+  --radius: 0px;
+  --chip-radius: 0px;
+
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --h1-weight: 800;
+  --h1-transform: none;
+  --h1-tracking: -0.01em;
+  --h1-lh: 1.12;
+  --h2-weight: 800;
+  --h2-transform: none;
+  --h2-tracking: 0;
+
+  --kicker-weight: 700;
+  --kicker-transform: uppercase;
+  --kicker-tracking: .16em;
+
+  --btn-weight: 700;
+  --btn-transform: uppercase;
+  --btn-tracking: .04em;
+  --btn-radius: 0px;
+  --btn-border-w: 2px;
+
+  --card-border-w: 3px;
+  --card-radius: 0px;
+
+  --focus: #0A0A0A;
+  --speed: 170ms;
+  --hero-dur: 180ms;
+
+  --struct-w: 8px;           /* structural line between sections (R2) */
+  --cal-frame-w: 8px;
+  --cal-cell-border-w: 3px;
+  --cal-cell-line: #0A0A0A;
+  --cal-gap: 8px;
+  --brand-accent: #DD0100;
+}
+
+/* structural 8px lines on header/footer too */
+html[data-style="de-stijl"] .site-header,
+html[data-style="de-stijl"] .site-footer { border-width: 8px; }
+
+/* kicker & links: blue = information (a11y: 7.9:1 on white) */
+html[data-style="de-stijl"] .kicker { color: #225095; }
+html[data-style="de-stijl"] .agent__lvl { color: #225095; }
+
+/* hero decor: Mondrian composition — exactly 3 colored cells (R3),
+   orthogonal only, 8px black lines via grid gap (R1, R2, R4) */
+html[data-style="de-stijl"] .hero__visual {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  background: #0A0A0A;
+  border: 8px solid #0A0A0A;
+  min-height: 400px;
+}
+/* shapes: in-flow grid items — the mondrian cells (abspos would drop them
+   out of the grid layout) */
+html[data-style="de-stijl"] .shape {
+  position: static; width: auto; height: auto;
+}
+html[data-style="de-stijl"] .hero__visual::before {
+  content: ""; grid-area: 1 / 3 / 2 / 4; background: #FFFFFF;
+}
+html[data-style="de-stijl"] .hero__visual::after {
+  content: ""; grid-area: 2 / 1 / 3 / 2; background: #FFFFFF;
+}
+html[data-style="de-stijl"] .shape--a { grid-area: 1 / 1 / 3 / 3; background: #DD0100; }
+html[data-style="de-stijl"] .shape--b { grid-area: 2 / 3 / 4 / 4; background: #225095; }
+html[data-style="de-stijl"] .shape--c { grid-area: 3 / 1 / 4 / 2; background: #FACA03; }
+
+/* buttons: colored cells obeying the grid (R6), hover = cell inversion */
+html[data-style="de-stijl"] .btn--primary {
+  background: #DD0100; color: #FFFFFF; border: 2px solid #0A0A0A;
+}
+html[data-style="de-stijl"] .btn--primary:hover { background: #0A0A0A; color: #FFFFFF; }
+html[data-style="de-stijl"] .btn--ghost {
+  background: #FFFFFF; color: #0A0A0A; border: 3px solid #0A0A0A;
+}
+html[data-style="de-stijl"] .btn--ghost:hover { background: #0A0A0A; color: #FFFFFF; }
+
+/* chips: white cells with 3px detail border + colored top bar (R2, R3) */
+html[data-style="de-stijl"] .chip {
+  position: relative; background: #FFFFFF; color: #0A0A0A;
+  border: 3px solid #0A0A0A; border-top-width: 12px;
+}
+html[data-style="de-stijl"] .chip--s { border-top-color: #DD0100; }
+html[data-style="de-stijl"] .chip--c { border-top-color: #225095; }
+html[data-style="de-stijl"] .chip--a { border-top-color: #FACA03; }
+html[data-style="de-stijl"] .chip--d { border-top-color: #0A0A0A; }
+
+/* legend dots: solid primary squares, no cell chrome */
+html[data-style="de-stijl"] .dot { background: #FFFFFF; }
+html[data-style="de-stijl"] .dot.chip--s { background: #DD0100; }
+html[data-style="de-stijl"] .dot.chip--c { background: #225095; }
+html[data-style="de-stijl"] .dot.chip--a { background: #FACA03; }
+html[data-style="de-stijl"] .dot.chip--d { background: #0A0A0A; }
+
+/* step number: square white cell (R4: no curves) */
+html[data-style="de-stijl"] .step__num {
+  background: #FFFFFF; color: #0A0A0A;
+  border: 3px solid #0A0A0A; border-radius: 0;
+}
+
+/* flat: no transforms on hover (motion = opacity/color only, 150–200ms) */
+html[data-style="de-stijl"] .card,
+html[data-style="de-stijl"] .card:hover { transform: none; }
+html[data-style="de-stijl"] .card { transition: background var(--speed) ease-out; }
+html[data-style="de-stijl"] .card:hover { background: #E9E9E9; }
+
+/* stats: cells separated by detail lines */
+html[data-style="de-stijl"] .stats__grid { gap: 0; }
+html[data-style="de-stijl"] .stat { border: 3px solid #0A0A0A; border-radius: 0; }
+html[data-style="de-stijl"] .stat + .stat { border-left-width: 0; }
+html[data-style="de-stijl"] .stat__val { color: #0A0A0A; }
+
+/* CTA band: black cell */
+html[data-style="de-stijl"] .cta { background: #0A0A0A; }
+html[data-style="de-stijl"] .cta h2 { color: #FACA03; }

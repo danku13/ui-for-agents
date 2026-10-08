@@ -1,0 +1,131 @@
+/* ============================================================
+   Theme: Art Nouveau (≈1893–1910)
+   Tokens from 60-styles/art-nouveau.md — cream/champagne ground,
+   antique gold as LINE only, mauve/sage washes, arch geometry.
+   ============================================================ */
+
+html[data-style="art-nouveau"] {
+  --bg: #F7F1E3;
+  --bg-soft: #F0E7D2;
+  --surface: #FDFAF2;
+  --ink: #4A4132;
+  --muted: #6B6153;
+
+  --accent: #B08D3E;        /* gold — lines only, never text */
+  --accent-fg: #4A4132;     /* tinted panels take ink text */
+  --accent-ink: #7A5C25;    /* deepened gold, ≥5:1 on cream */
+  --accent-2: #9C7183;      /* mauve — strokes/washes */
+  --accent-3: #8A9A7B;      /* sage — strokes/washes */
+
+  --line: #B08D3E;
+  --border-w: 1.5px;
+  --radius: 2px;
+  --chip-radius: 14px;
+
+  --font-display: 'Cormorant Infant', 'PT Serif', serif;
+  --font-body: 'PT Serif', Georgia, serif;
+
+  --h1-weight: 600;
+  --h1-transform: none;
+  --h1-tracking: .01em;
+  --h1-lh: 1.14;
+  --h2-weight: 600;
+  --h2-transform: none;
+  --h2-tracking: .01em;
+
+  --kicker-transform: uppercase;
+  --kicker-tracking: .24em;
+  --kicker-weight: 600;
+
+  --btn-weight: 600;
+  --btn-transform: none;
+  --btn-tracking: .04em;
+  --btn-radius: 2px;
+
+  --card-border-w: 1.5px;
+  --card-radius: 2px;
+  --card-pad: 1.7rem;
+
+  --focus: #8C6D2F;
+  --speed: 240ms;
+  --hero-dur: 300ms;
+
+  --cal-cell-border-w: 1px;
+  --cal-cell-line: #E6DCBE;
+  --brand-accent: #7A5C25;
+}
+
+/* primary CTA carries the arch silhouette (R2) */
+html[data-style="art-nouveau"] .btn--primary {
+  border-radius: 26px 26px 4px 4px;
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+html[data-style="art-nouveau"] .btn--primary:hover {
+  background: var(--ink);
+  color: #FDFAF2;
+  border-color: var(--ink);
+}
+html[data-style="art-nouveau"] .btn--ghost { border-radius: 2px; }
+
+/* hero: one arch container with stained-glass washes (R2, R3) */
+html[data-style="art-nouveau"] .hero__visual {
+  border: 1.5px solid var(--accent);
+  outline: 1px solid var(--accent);
+  outline-offset: 7px;
+  border-radius: 300px 300px 16px 16px;
+  background:
+    radial-gradient(120% 90% at 20% 12%, #EBDCE4 0%, transparent 55%),
+    radial-gradient(110% 80% at 85% 80%, #DFE6D4 0%, transparent 60%),
+    var(--surface);
+  overflow: hidden;
+}
+html[data-style="art-nouveau"] .hero__visual::before {
+  content: ""; position: absolute; inset: 13px;
+  border: 1px solid #C9B98C;
+  border-radius: 285px 285px 10px 10px;
+}
+html[data-style="art-nouveau"] .hero__visual::after {
+  content: ""; position: absolute; left: 20%; bottom: 4%; width: 60%; height: 42px;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40' preserveAspectRatio='none'><path d='M4 30 C 40 2, 70 38, 100 20 S 160 4, 196 26' fill='none' stroke='%23B08D3E' stroke-width='1.5'/></svg>") no-repeat center / 100% 100%;
+}
+html[data-style="art-nouveau"] .shape--a {
+  width: 200px; height: 200px; border-radius: 50%;
+  background: #E4CBD6; border: 1.5px solid #9C7183;
+  left: 10%; top: 16%;
+}
+html[data-style="art-nouveau"] .shape--b {
+  width: 150px; height: 150px; border-radius: 50%;
+  background: #DCE4D2; border: 1.5px solid #8A9A7B;
+  right: 13%; bottom: 22%;
+}
+html[data-style="art-nouveau"] .shape--c {
+  width: 88px; height: 88px; border-radius: 50%;
+  background: transparent; border: 1.5px solid var(--accent);
+  left: 46%; top: 12%;
+}
+
+/* chips: tinted washes with ink text + gold border (a11y watchpoints) */
+html[data-style="art-nouveau"] .chip { border-width: 1px; border-color: #C4A458; }
+html[data-style="art-nouveau"] .chip--s { background: #F1E6C8; color: #4A4132; }
+html[data-style="art-nouveau"] .chip--c { background: #EAD9E0; color: #4A4132; }
+html[data-style="art-nouveau"] .chip--a { background: #E2E8DA; color: #4A4132; }
+html[data-style="art-nouveau"] .chip--d { background: #EFE8D8; color: #4A4132; }
+
+/* step numbers: gold ring, ink numeral */
+html[data-style="art-nouveau"] .step__num {
+  background: transparent; color: var(--ink);
+  border: 1.5px solid var(--accent); border-radius: 50%;
+  font-weight: 700;
+}
+
+/* quote: italic serif with gold initial rule */
+html[data-style="art-nouveau"] .quote p { font-style: italic; }
+html[data-style="art-nouveau"] .quote figcaption { border-top: 1px solid #C9B98C; padding-top: .8rem; max-width: 46ch; }
+
+/* stats */
+html[data-style="art-nouveau"] .stat { border-top-color: #C9B98C; }
+
+/* calendar keeps a thin gold frame */
+html[data-style="art-nouveau"] .cal { border-width: 1.5px; }

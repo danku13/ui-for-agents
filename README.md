@@ -13,6 +13,10 @@ Four design decisions define this library:
 3. **Adapted best practice.** Distilled from Material Design 3, Apple HIG, WCAG 2.2, Nielsen Norman Group research, and leading open design systems. Full link list lives in `REFERENCES.md`.
 4. **Progressive loading.** Files are small (100–170 lines), heavily cross-linked, and grouped so an agent can load 3–8 files per task instead of the whole library.
 
+## Live demo
+
+**[Content OS landing — one structure, five heritage styles](https://danku13.github.io/ui-for-agents/)** — a product-marketing landing rendered from a single DOM in Art Nouveau, De Stijl, Bauhaus, Constructivism and Art Deco, with a runtime style switcher. Every theme's tokens come verbatim from the matching preset in `60-styles/`. Source and structure contract: [`demo/content-os-landing/`](demo/content-os-landing/) (`STRUCTURE.md` explains the DOM/token split).
+
 ## Library map
 
 | Section | Path | Contents |
@@ -57,10 +61,6 @@ Four design decisions define this library:
 | Create or apply a distinct visual style | `60-styles/style-catalog.md` + `60-styles/style-design-process.md` + the chosen `60-styles/<style>.md` + `10-design-system/design-tokens.md` + `40-quality/visual-qa-protocol.md` |
 
 The full matrix with mandatory vs on-demand files lives in `AGENT-WORKFLOW.md`.
-
-## Live style demo
-
-A demo landing page ("Content OS") implements the same structure in five movement presets — `art-nouveau`, `bauhaus`, `de-stijl`, `constructivism`, `art-deco` — with a live style switcher. Source lives in `docs/` (GitHub Pages). Use it to see what each preset produces in practice: https://danku13.github.io/ui-for-agents/
 
 ## Extending the library
 

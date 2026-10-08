@@ -1,0 +1,113 @@
+/* ============================================================
+   Theme: Bauhaus (1919)
+   Tokens from 60-styles/bauhaus.md — primary triad + black on
+   off-white, three primitives only, black rules are structure.
+   ============================================================ */
+
+html[data-style="bauhaus"] {
+  --bg: #F4F1EA;
+  --bg-soft: #ECE7DC;
+  --surface: #FFFFFF;
+  --ink: #141414;
+  --muted: #55524B;
+
+  --accent: #DA291C;        /* red = action */
+  --accent-fg: #FFFFFF;
+  --accent-ink: #B32217;    /* darkened red for small text */
+  --accent-2: #0F5CA8;      /* blue = information */
+  --accent-3: #F4C300;      /* yellow = filled shapes only */
+
+  --line: #141414;
+  --border-w: 3px;
+  --radius: 0px;
+  --chip-radius: 999px;
+
+  --font-display: 'Montserrat', 'Inter', system-ui, sans-serif;
+  --font-body: 'Montserrat', 'Inter', system-ui, sans-serif;
+
+  --h1-weight: 900;
+  --h1-transform: uppercase;
+  --h1-tracking: .02em;
+  --h1-lh: 1.06;
+  --h2-weight: 900;
+  --h2-transform: uppercase;
+  --h2-tracking: .03em;
+
+  --kicker-weight: 700;
+  --kicker-transform: uppercase;
+  --kicker-tracking: .18em;
+
+  --btn-weight: 700;
+  --btn-transform: uppercase;
+  --btn-tracking: .06em;
+  --btn-radius: 0px;
+  --btn-border-w: 2px;
+
+  --card-border-w: 2px;
+  --card-radius: 0px;
+
+  --focus: #141414;
+  --speed: 180ms;
+  --hero-dur: 220ms;
+
+  --title-rule: block;      /* R6: full-width rule under section heads */
+  --brand-accent: #DA291C;
+}
+
+/* focus: 2px black outline with offset (a11y watchpoints) */
+html[data-style="bauhaus"] :focus-visible {
+  outline: 2px solid #141414;
+  outline-offset: 2px;
+}
+
+/* hero decor: circle / semicircle / triangle + black bar — the closed
+   primitive set (R1), asymmetric counterweight (R4) */
+html[data-style="bauhaus"] .hero__visual::before {
+  content: ""; position: absolute; left: 0; top: 40%;
+  width: 100%; height: 10px; background: #141414;
+}
+html[data-style="bauhaus"] .hero__visual::after {
+  content: ""; position: absolute; right: 22%; top: 2%;
+  width: 48px; height: 48px; background: #141414;
+}
+html[data-style="bauhaus"] .shape--a {
+  width: 230px; height: 230px; border-radius: 50%;
+  background: #DA291C;
+  left: 7%; top: 4%;
+}
+html[data-style="bauhaus"] .shape--b {
+  width: 210px; height: 105px; border-radius: 0 0 210px 210px;
+  background: #F4C300;
+  right: 4%; bottom: 16%;
+}
+html[data-style="bauhaus"] .shape--c {
+  width: 160px; height: 140px;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  background: #0F5CA8;
+  left: 44%; bottom: 0;
+}
+
+/* cards: white, black border, mechanical hover (R6, R7) */
+html[data-style="bauhaus"] .card:hover { transform: translateY(-3px); }
+html[data-style="bauhaus"] .stat { border-top-color: #141414; }
+
+/* step number: yellow circle + ink numeral, shape+label pairing (R8) */
+html[data-style="bauhaus"] .step__num {
+  background: #F4C300; color: #141414;
+  border: 2px solid #141414;
+}
+
+/* links stay blue (R2: blue = information) */
+html[data-style="bauhaus"] a { color: #0F5CA8; }
+
+/* calendar: rows separated by structural black rules, cells open */
+html[data-style="bauhaus"] .cal { background: transparent; }
+html[data-style="bauhaus"] .cal__row {
+  border-top: 2px solid #141414;
+  padding-block: 6px;
+}
+html[data-style="bauhaus"] .cal__cell { min-height: 50px; }
+
+/* CTA band: ink ground, red primary action carries over */
+html[data-style="bauhaus"] .cta { background: #141414; }
+html[data-style="bauhaus"] .cta .btn--primary { border: 2px solid #F4C300; }

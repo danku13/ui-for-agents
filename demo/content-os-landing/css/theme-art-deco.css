@@ -1,0 +1,163 @@
+/* ============================================================
+   Theme: Art Deco (1925)
+   Tokens from 60-styles/art-deco.md — gold on near-black, one
+   jewel field (navy), symmetry is law, gold is a line, slow
+   confident 300–400ms fades.
+   ============================================================ */
+
+html[data-style="art-deco"] {
+  --bg: #0E0E10;             /* near-black */
+  --bg-soft: #121215;        /* charcoal step */
+  --surface: #1A1A1E;
+  --ink: #F2EDE0;            /* ivory text */
+  --muted: #B9B4A6;
+
+  --accent: #D4AF37;         /* gold — lines, frames, large display */
+  --accent-fg: #0E0E10;      /* ink on gold ≈9:1 */
+  --accent-ink: #D4AF37;     /* gold text ≥7:1 on near-black */
+  --accent-2: #14203E;       /* navy — the one jewel field */
+  --accent-3: #D4AF37;
+
+  --line: #D4AF37;
+  --border-w: 1px;
+  --radius: 0px;
+  --chip-radius: 0px;
+
+  --font-display: 'Poiret One', 'Manrope', sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+
+  --h1-weight: 400;
+  --h1-transform: uppercase;
+  --h1-tracking: .1em;
+  --h1-lh: 1.18;
+  --h2-weight: 400;
+  --h2-transform: uppercase;
+  --h2-tracking: .1em;
+
+  --kicker-weight: 700;
+  --kicker-transform: uppercase;
+  --kicker-tracking: .3em;
+
+  --btn-weight: 600;
+  --btn-transform: uppercase;
+  --btn-tracking: .18em;
+  --btn-radius: 0px;
+  --btn-border-w: 1px;
+
+  --card-border-w: 1px;
+  --card-radius: 0px;
+
+  --focus: #D4AF37;
+  --speed: 350ms;
+  --hero-dur: 380ms;
+
+  --cal-cell-border-w: 1px;
+  --cal-cell-line: rgba(212, 175, 55, .35);
+  --brand-accent: #D4AF37;
+}
+
+/* gold links on dark (navy fails on near-black) */
+html[data-style="art-deco"] a { color: #D4AF37; }
+
+/* R1: symmetry is law — hero, section heads, CTA on the center axis */
+html[data-style="art-deco"] .hero__in {
+  grid-template-columns: 1fr; justify-items: center; text-align: center;
+}
+html[data-style="art-deco"] .hero__copy { max-width: 760px; }
+html[data-style="art-deco"] .lead { margin-inline: auto; }
+html[data-style="art-deco"] .hero__actions,
+html[data-style="art-deco"] .cta__actions { justify-content: center; }
+html[data-style="art-deco"] .section-head { margin-inline: auto; text-align: center; }
+html[data-style="art-deco"] .section-sub { margin-inline: auto; }
+
+/* hero visual: the one jewel field (R8) + sunburst + marquee double rule */
+html[data-style="art-deco"] .hero__visual {
+  max-width: 560px;
+  border: 1px solid #D4AF37;
+  box-shadow: inset 0 0 0 4px #14203E, inset 0 0 0 5px #D4AF37;
+  background:
+    repeating-conic-gradient(from 0deg at 50% 100%,
+      rgba(212, 175, 55, .30) 0deg 3deg, transparent 3deg 15deg),
+    #14203E;
+}
+html[data-style="art-deco"] .hero__visual::before {
+  content: ""; position: absolute; left: 10%; right: 10%; bottom: 20%;
+  height: 1px; background: #D4AF37;
+}
+html[data-style="art-deco"] .hero__visual::after {
+  content: ""; position: absolute; left: 50%; top: 8%;
+  width: 170px; height: 120px; transform: translateX(-50%);
+  border: 1px solid #D4AF37; border-bottom: 0;
+  border-radius: 170px 170px 0 0;
+}
+/* ziggurat silhouette (R4: stepped corners replace radii) */
+html[data-style="art-deco"] .shape--a {
+  left: 27%; right: 27%; bottom: 20%; height: 36%;
+  clip-path: polygon(0 100%, 0 78%, 18% 78%, 18% 52%, 38% 52%,
+                     38% 26%, 62% 26%, 62% 52%, 82% 52%, 82% 78%,
+                     100% 78%, 100% 100%);
+  background: #D4AF37;
+}
+html[data-style="art-deco"] .shape--b {
+  width: 22px; height: 22px; transform: rotate(45deg);
+  border: 1px solid #D4AF37; background: transparent;
+  left: 50%; top: 34%; margin-left: -11px;
+}
+html[data-style="art-deco"] .shape--c {
+  width: 1px; height: 26%; left: 50%; top: 48%;
+  background: #D4AF37;
+}
+
+/* marquee-framed cards: 1px gold + inner rule 4px apart */
+html[data-style="art-deco"] .card {
+  box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5px #D4AF37;
+}
+html[data-style="art-deco"] .card:hover { transform: translateY(-3px); }
+
+/* buttons: gold-framed cells with ivory text (R2); primary = gold field */
+html[data-style="art-deco"] .btn--primary { background: #D4AF37; color: #0E0E10; }
+html[data-style="art-deco"] .btn--primary:hover { background: #F2EDE0; color: #0E0E10; }
+html[data-style="art-deco"] .btn--ghost { border-color: #D4AF37; color: #F2EDE0; }
+html[data-style="art-deco"] .btn--ghost:hover { background: #D4AF37; color: #0E0E10; }
+
+/* step numbers: gold double-rule squares, gold numerals (display ≥24px) */
+html[data-style="art-deco"] .step__num {
+  width: 60px; height: 60px;
+  background: var(--surface); color: #D4AF37;
+  border: 1px solid #D4AF37; border-radius: 0;
+  box-shadow: inset 0 0 0 3px var(--surface), inset 0 0 0 4px #D4AF37;
+  font-weight: 400; font-size: 1.6rem;
+}
+
+/* chips: dark cells, gold rules; s = gold field with ink text */
+html[data-style="art-deco"] .chip { border-width: 1px; border-color: #D4AF37; }
+html[data-style="art-deco"] .chip--s { background: #D4AF37; color: #0E0E10; }
+html[data-style="art-deco"] .chip--c { background: #14203E; color: #F2EDE0; }
+html[data-style="art-deco"] .chip--a { background: transparent; color: #D4AF37; }
+html[data-style="art-deco"] .chip--d { background: #F2EDE0; color: #0E0E10; }
+
+/* quote: centered, chevron-free, diamond marker (fixed motif set R3) */
+html[data-style="art-deco"] .quote { text-align: center; }
+html[data-style="art-deco"] .quote p { margin-inline: auto; font-weight: 400; }
+html[data-style="art-deco"] .quote figcaption::before {
+  content: ""; display: block; width: 9px; height: 9px;
+  background: #D4AF37; transform: rotate(45deg); margin: 0 auto .7rem;
+}
+
+/* stats: gold display numerals */
+html[data-style="art-deco"] .stat { border-top-color: #D4AF37; }
+html[data-style="art-deco"] .stat__val { color: #D4AF37; font-weight: 400; }
+
+/* CTA: the ivory ballroom inversion */
+html[data-style="art-deco"] .cta { background: #F2EDE0; }
+html[data-style="art-deco"] .cta h2 { color: #0E0E10; }
+html[data-style="art-deco"] .cta p { color: #44413A; }
+html[data-style="art-deco"] .cta .btn--ghost { border-color: #0E0E10; color: #0E0E10; }
+html[data-style="art-deco"] .cta .btn--ghost:hover { background: #0E0E10; color: #F2EDE0; }
+
+/* calendar: marquee frame */
+html[data-style="art-deco"] .cal {
+  background: var(--surface);
+  box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5px #D4AF37;
+  border: 1px solid #D4AF37;
+}
