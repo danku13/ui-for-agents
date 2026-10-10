@@ -1,6 +1,6 @@
 # Responsive & Adaptive Layout
 
-> **Read when:** any UI must survive variable window sizes, screen sizes, zoom levels, or input methods. **Section:** 40-quality. **Related:** 00-fundamentals/spacing-layout-grids.md, 00-fundamentals/typography.md, accessibility-wcag.md, visual-qa-protocol.md, 50-platforms/rust-native-gui.md, 50-platforms/web-css-dom.md
+> **Read when:** any UI must survive variable window sizes, screen sizes, zoom levels, or input methods. **Section:** 40-quality. **Related:** 00-fundamentals/spacing-layout-grids.md, 00-fundamentals/typography.md, accessibility-wcag.md, visual-qa-protocol.md, 30-ux-patterns/touch-and-mobile.md, 50-platforms/rust-native-gui.md, 50-platforms/web-css-dom.md
 
 **Core idea:** responsive = one layout reflowing fluidly; adaptive = deliberate layout switches per environment (window class, input type, screen). Real products need both: fluid within a class, adaptive between classes. Every claim in this file is verified at the extremes, not at the demo size.
 

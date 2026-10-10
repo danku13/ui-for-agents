@@ -7,15 +7,19 @@
 - **Anatomy** — named parts of a component (e.g. button: container, label, icon, badge) used in documentation and QA.
 - **Anti-pattern** — a recurring "solution" that looks reasonable but reliably causes problems.
 - **Baseline grid** — invisible vertical rhythm to which text blocks align.
+- **Bidi (bidirectional text)** — text mixing RTL and LTR runs in one paragraph; embedded runs must be isolated so punctuation and order stay correct.
+- **Bottom sheet** — panel anchored to the screen bottom for contextual tasks; the mobile alternative to a full-screen modal.
 - **Breakpoint** — viewport/window width at which layout arrangement changes.
 - **Color ramp (scale)** — ordered steps of one hue (50…900) from which semantic roles pick values.
 - **Component** — a reusable UI unit with defined anatomy, states, and behavior.
 - **Controlled / uncontrolled** — whether a component's value is driven by external state or owns it internally.
 - **Contrast ratio** — luminance ratio between text and background; WCAG floor 4.5:1 body, 3:1 large text / UI parts.
 - **Design token** — named design decision (color, size, duration); the contract between design and implementation.
+- **Diverging scale** — color scale with a meaningful midpoint (zero, target); used only when the data actually has one.
 - **Elevation** — perceived distance from the background, expressed via shadow/surface/border.
 - **Escape hatch** — documented "exit" in an API (style/class passthrough) for cases the component does not cover.
 - **Empty state** — what a region shows when it has no data; a teaching moment, not a blank.
+- **FAB (floating action button)** — the single primary action of a mobile view, floating above content.
 - **Focus order** — sequence focus moves through with Tab; must match visual/logical order.
 - **Focus trap** — keeping keyboard focus inside a modal until it closes; must release focus back on close.
 - **Golden-image test** — automated pixel comparison against an approved baseline screenshot.
@@ -24,6 +28,7 @@
 - **Hit target (touch target)** — interactive area size; WCAG 2.2 minimum 24×24 px, 44×44 recommended for touch.
 - **Immediate mode** — GUI style (egui) where the UI is re-declared every frame; state lives in the app.
 - **Landmark** — semantic page region (navigation, main, search) exposed to assistive tech.
+- **Logical properties** — layout expressed as start/end and inline/block instead of left/right; the foundation of RTL-safe design.
 - **Measure (line length)** — characters per line; readable range 45–75.
 - **Microcopy** — short UI text: labels, buttons, errors, hints.
 - **Modal / modeless** — blocking vs non-blocking overlay; modal demands a decision now.
@@ -34,14 +39,19 @@
 - **Progressive disclosure** — showing detail only when requested, keeping default views simple.
 - **Progressive loading (docs)** — agent loads only files relevant to the current task.
 - **RTL / LTR** — right-to-left / left-to-right script direction; mirrors layout and icons.
+- **Safe area** — screen region guaranteed free of notches, system bars, and gesture zones; controls must live inside it.
 - **Retained mode** — GUI style (iced, Slint) where widgets persist; state syncs between model and view.
 - **Scrim** — dimming layer behind overlays that separates context layers.
+- **Sequential scale** — ordered color ramp (one hue light→dark) encoding magnitude data.
 - **Skeleton screen** — layout-shaped placeholder shown while real content loads.
 - **Slot** — named insertion point in a component (header, footer, actions).
 - **Spacing scale** — fixed spacing steps (4, 8, 12, 16, 24, 32, 48, 64) instead of arbitrary values.
 - **State (UI)** — condition a component renders: default, hover, focus, active, disabled, loading, empty, error.
 - **Surface** — background plane on which content sits; carries elevation meaning.
+- **Small multiples** — series of mini charts sharing identical scales, one per group; beats one overloaded chart.
+- **Text expansion** — translated text growing vs English (~+35% German, ~+20% Russian); containers must absorb it.
 - **Themable** — component expresses colors/sizes only through tokens, so remapping re-skins it.
+- **Thumb zone** — screen region comfortably reached by a one-handed thumb; primary actions live here.
 - **Truncation** — shortening overflowing text with ellipsis; must preserve access to full content.
 - **WCAG** — Web Content Accessibility Guidelines; the a11y norm this library cites.
 - **Whitespace** — empty area used for grouping and hierarchy; a design material, not leftovers.

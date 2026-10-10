@@ -1,6 +1,6 @@
 # Typography
 
-> **Read when:** setting any text — sizes, weights, line-heights, measures, or choosing and stacking fonts. **Section:** 00-fundamentals. **Related:** 00/visual-hierarchy.md, 00/color.md, 00/spacing-layout-grids.md, 40/accessibility-wcag.md
+> **Read when:** setting any text — sizes, weights, line-heights, measures, or choosing and stacking fonts. **Section:** 00-fundamentals. **Related:** 00/visual-hierarchy.md, 00/color.md, 00/spacing-layout-grids.md, 00/internationalization-rtl.md, 40/accessibility-wcag.md
 
 **Core idea:** typography is the interface's voice and its hierarchy engine. A small modular scale, strict line-height and measure rules, and 2–3 weights do more for readability than any font choice.
 

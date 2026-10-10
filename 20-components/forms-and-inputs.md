@@ -1,6 +1,6 @@
 # Forms and Inputs
 
-> **Read when:** building any form — sign-up, settings, filters, checkout. **Section:** 20-components. **Related:** 20/components-catalog.md, 20/buttons-and-actions.md, 30-ux-patterns/forms-validation-ux.md, 30-ux-patterns/microcopy.md, 40-quality/accessibility-wcag.md, 00/spacing-layout-grids.md
+> **Read when:** building any form — sign-up, settings, filters, checkout. **Section:** 20-components. **Related:** 20/components-catalog.md, 20/buttons-and-actions.md, 30-ux-patterns/forms-validation-ux.md, 30-ux-patterns/microcopy.md, 30-ux-patterns/touch-and-mobile.md, 40-quality/accessibility-wcag.md, 00/spacing-layout-grids.md
 
 **Core idea:** a form is a conversation with one question per row; every field must be self-explanatory, keyboard-complete, and stable while it is being answered.
 

@@ -64,6 +64,27 @@ Copy-paste ready list. Each entry is annotated with what it is good for so an ag
 - Style Dictionary — https://github.com/amzn/style-dictionary — token source → CSS/iOS/Android/any platform output.
 - Tokens Studio — https://github.com/tokens-studio/figma-plugin — Figma-side token management that syncs to code.
 
+## Internationalization & RTL
+
+- W3C i18n — RTL/bidirectional guidance — https://www.w3.org/International/questions/qa-rtl — the canonical mirror rules and bidi pitfalls.
+- MDN — CSS logical properties — https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values — start/end instead of left/right; the RTL implementation tool.
+- Unicode UAX #9 — Bidi Algorithm — https://unicode.org/reports/tr9/ — how mixed-direction runs resolve; basis for isolation decisions.
+- ICU / MDN Intl — locale-aware formatting — https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl — dates, numbers, currency, plurals per locale.
+
+## Data visualization
+
+- Cleveland & McGill — Graphical Perception — https://www.stat.berkeley.edu/~stark/Teach/s244/lec-notes/Cleveland-McGill.pdf — the encoding-accuracy ranking behind R1 of data-visualization.md.
+- ColorBrewer 2 — https://colorbrewer2.org — colorblind-safe sequential/diverging/qualitative scales with export values.
+- Viridis colormaps — https://bids.github.io/colormap/ — perceptually uniform ramps for magnitude data.
+- Datawrapper Blog — https://blog.datawrapper.de/ — chart-choice, scales, and annotation craft in practice.
+- ECharts examples — https://echarts.apache.org/examples/ — implementation reference for interaction patterns (brush, dataZoom).
+
+## Touch & mobile
+
+- NN/g — Magic numbers & thumb zone — https://www.nngroup.com/articles/magic-numbers-mobile/ — target sizes and one-handed reach research.
+- Apple HIG — Gestures — https://developer.apple.com/design/human-interface-guidelines/gestures — platform gesture conventions and safe areas.
+- Material Design 3 — Components (bottom sheets, FAB) — https://m3.material.io/components — behavior specs for mobile-first patterns.
+
 ## Rust & native GUI (first-class targets)
 
 - egui — https://github.com/emilk/egui — immediate-mode; fast iteration; built-in AccessKit support.

@@ -14,14 +14,14 @@ Use the table below. Load **Mandatory** files; load **On demand** files only whe
 
 | Task type | Mandatory | On demand |
 |---|---|---|
-| NEW-SCREEN | 00/visual-hierarchy, 00/spacing-layout-grids, 00/color, 00/typography, 20/components-catalog, 40/visual-qa-protocol | 20/ files for component types on the screen; 30/ files for flows present (forms, search…); 50/ file for the target platform |
+| NEW-SCREEN | 00/visual-hierarchy, 00/spacing-layout-grids, 00/color, 00/typography, 20/components-catalog, 40/visual-qa-protocol | 20/ files for component types on the screen; 30/ files for flows present (forms, search…); 30/touch-and-mobile for touch targets; 30/data-visualization for chart-heavy views; 00/internationalization-rtl for localized products; 50/ file for the target platform |
 | NEW-COMPONENT | 10/component-api-design, 20/components-catalog, 40/accessibility-wcag, 40/visual-qa-protocol | 00/fundamentals files for visual decisions; 10/component-documentation.md |
 | BUILD-KIT | all `00-fundamentals/` + all `10-design-system/` | 40/accessibility-wcag, 50/cross-platform-parity |
 | INTEGRATE-LIB | 10/using-existing-libraries, 20/components-catalog | 10/design-tokens (to map library variables), 10/theming-dark-mode |
 | MODIFY-UI | file(s) covering the modified element in `20-components/` or `30-ux-patterns/` + 40/visual-qa-protocol | 00/fundamentals if the change is visual; 50/ platform file |
-| REVIEW-UI | 40/usability-heuristics, 40/accessibility-wcag, 40/visual-qa-protocol | 30/empty-loading-error-states, 20/components-catalog |
+| REVIEW-UI | 40/usability-heuristics, 40/accessibility-wcag, 40/visual-qa-protocol | 30/empty-loading-error-states, 20/components-catalog, 30/touch-and-mobile (touch products), 30/data-visualization (charts), 00/internationalization-rtl (localized products) |
 | FIX-DEFECT | the file whose rules were violated | follow `Related:` links from that file |
-| THEME-CHANGE | 10/design-tokens, 10/theming-dark-mode | 00/color; 50/ file for renderer limits |
+| THEME-CHANGE | 10/design-tokens, 10/theming-dark-mode | 00/color; 00/internationalization-rtl (direction-aware tokens); 50/ file for renderer limits |
 | NEW-STYLE | 60/style-design-process, 60/style-catalog, 10/design-tokens, 00/color, 00/typography | 60/ existing presets as references; 00/motion-principles; 40/visual-qa-protocol |
 | APPLY-STYLE | 60/<style>.md, 10/design-tokens, 00/visual-hierarchy, 40/visual-qa-protocol | 20/ files per component types; 50/ platform file; 60/style-catalog if the choice is not yet fixed |
 

@@ -1,6 +1,6 @@
 # Dashboards & Data Visualization UX
 
-> **Read when:** designing dashboards, KPI rows, charts, reports, or any data display region. | **Section:** 30-ux-patterns | **Related:** ../00-fundamentals/visual-hierarchy.md, ../00-fundamentals/color.md, ../40-quality/usability-heuristics.md, ../20-components/tables-and-data-lists.md, ../40-quality/perceived-performance.md
+> **Read when:** designing dashboards, KPI rows, charts, reports, or any data display region. | **Section:** 30-ux-patterns | **Related:** ./data-visualization.md, ../00-fundamentals/visual-hierarchy.md, ../00-fundamentals/color.md, ../40-quality/usability-heuristics.md, ../20-components/tables-and-data-lists.md, ../40-quality/perceived-performance.md
 
 **Core idea:** a chart is an answer to a question. Pick the form from the question, not from what the library offers; make the current value readable in 3 seconds and the distortion level zero.
 
